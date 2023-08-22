@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 #import jinja2
 app = Flask(__name__)
 
-# Aggiungi jinja2.ext.do come estensione
+# Aggiungi jinja2.ext.do come estensione 
 #app.jinja_env.add_extension('jinja2.ext.do')
 debug = 0
 num_step = 1

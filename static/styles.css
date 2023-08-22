@@ -1,0 +1,56 @@
+    /* Stili per personalizzare l'aspetto delle etichette dei radio button */
+    .custom-radio {
+      display: none; /* Nascondi i radio button originali */
+    }
+
+    .input-group {
+        width: 270px;
+        margin: 0 auto;
+        align-content: center;
+      }
+    
+      .text-underline-hover {
+        text-decoration:none;
+        color: white;
+      }
+    
+      .text-underline-hover:hover {
+        text-decoration: underline;
+        color: white;
+      }
+
+    .input-group-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; /* Larghezza desiderata per l'etichetta */
+      height: 30px; /* Altezza desiderata per l'etichetta */
+      border-radius: 50%; /* Rendi l'etichetta circolare */
+      cursor: pointer;
+      margin-right: 5px; /* Aggiungi un margine per separare le etichette */
+      background-color: #f0f0f0; /* Sfondo dell'etichetta */
+    }
+
+    /* Stili per evidenziare l'opzione selezionata */
+    .input-group-text input[type="radio"]:checked + label {
+      background-color: #007bff;
+      color: white;
+    }
+/* Stili per allineare i radio button in orizzontale */
+.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Assicurati che l'input radio non influisca sullo spazio */
+  .input-group-text input[type="radio"] {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+    

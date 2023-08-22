@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container p-5 my-5 text-center card">
+  <h6>
+    This self-assessment is intended to provide insights into yourself, addressing three critical areas to consider
+    before betting the farm on your entrepreneurial vision.<p></p>
+    Your score and our comments will appear on the worksheets with questions and will be repeated at right. These are
+    only a guide - there is a lot more to you than we pretend to know. But if we piqued your interest, consider how you
+    might fill any gaps in the skills, attitude, and knowledge identified.
+    <p></p>Many successful entrepreneurs will score high.
+    <p></p>
+  </h6>
+  <h3>Could you define your company as</h3>
+  <p></p>
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <form method="GET" action="/quiz/1">
+        <button class="btn btn-primary text-center" type="submit">{{ quizzes[0] }}</button>
+      </form>
+    </div>
+    <div class="col-12 col-md-4">
+      <form method="GET" action="/quiz/2">
+        <button class="btn btn-primary text-center" type="submit">{{ quizzes[1] }}</button>
+      </form>
+    </div>
+    <div class="col-12 col-md-4">
+      <form method="GET" action="/quiz/3">
+        <button class="btn btn-primary text-center" type="submit">{{ quizzes[2] }}</button>
+      </form>
+    </div> 
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container p-3 my-3 text-center card">
+  <h1>{{ namequiz }}</h1>
+  {% for i in range(categories|length) %}
+    <br />
+    <h3>{{ categories[i] }} - Vote: {{ score[i] }}/{{ total_score[i] }} ({{ comment[i] }})</h3>
+    <h5>{{ opinions[i][level[i]] }}</h5>
+  {% endfor %}
+
+  <form method="get" action="/">
+    <br />
+    <button class="btn btn-primary text-center" type="submit">Back to Home</button>
+  </form>
+</div>
+{% endblock %}

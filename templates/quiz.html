@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container p-3 my-3 text-center card">
+  <h1>{{ quiz }}</h1>
+  <h2>{{ category }}</h2>
+  <p>You can answer each question with a value from 1 (very much disagree) to 5 (very much agree)</p>
+  <form method="post" action="{{ numquiz }}">
+    {% for i in range(questions|length) %}
+    <h3>{{ i+1 }}. {{ questions[i] }}</h3>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" name="question_{{ i+1 }}" value="1" required>
+          <label class="form-check-label">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" name="question_{{ i+1 }}" value="2" required>
+          <label class="form-check-label">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" name="question_{{ i+1 }}" value="3" required>
+          <label class="form-check-label">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" name="question_{{ i+1 }}" value="4" required>
+          <label class="form-check-label">4</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" name="question_{{ i+1 }}" value="5" required>
+          <label class="form-check-label">5</label>
+        </div>
+      </div>
+    </div>           
+    <br><br>
+    {% endfor %}
+    <button class="btn btn-primary text-center" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}

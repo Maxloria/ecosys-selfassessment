@@ -1,0 +1,5 @@
+Poor
+Insufficient
+Sufficient
+Good
+Excellent
